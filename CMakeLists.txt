@@ -11,12 +11,12 @@ else()
     set(MODFILE go.mod)
 endif()
 
-ExternalProject_Add(create-gp4
+ExternalProject_Add(create-fself
     LOG_CONFIGURE YES
     LOG_BUILD YES
     LOG_INSTALL YES
     LOG_OUTPUT_ON_FAILURE YES
-    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cmd/create-gp4
+    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cmd/create-fself
     CONFIGURE_COMMAND ""
     BUILD_COMMAND go build -o ${TOOL_NAME} -modfile=${MODFILE}
     BUILD_IN_SOURCE 1
